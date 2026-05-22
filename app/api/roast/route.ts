@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     }
 
     const response = await genai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.0-flash',
       contents: [
         systemPrompt,
         `请根据下面的聊天记录进行诊断，并返回严格的 JSON：\n\n${chatLog}`,

@@ -5,7 +5,7 @@
 ## 当前项目内容
 
 - `app/page.tsx`：移动端赛博朋克风首页，支持粘贴/上传聊天记录并调用 AI 诊断
-- `app/api/roast/route.ts`：后端 API，使用 `@google/genai` 调用 `gemini-1.5-flash`
+- `app/api/roast/route.ts`：后端 API，使用 `@google/genai` 调用 `gemini-2.0-flash`
 - `app/layout.tsx`：Next.js app Router 全局布局入口
 - `app/globals.css`：Tailwind 样式和通用页面风格
 - `package.json`：项目依赖和启动脚本
