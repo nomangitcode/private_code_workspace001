@@ -2,11 +2,6 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const deepseek = new OpenAI({
-  apiKey: process.env.DEEPSEEK_API_KEY,
-  baseURL: 'https://api.deepseek.com',
-});
-
 const systemPrompt = `你是一个极度毒舌、满嘴美国最新网络热梗的情感专家。你的任务是：
 - 用最狠的网络调侃风格分析聊天记录
 - 保持毒舌但不攻击用户隐私
@@ -25,6 +20,11 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+
+    const deepseek = new OpenAI({
+      apiKey: process.env.DEEPSEEK_API_KEY,
+      baseURL: 'https://api.deepseek.com',
+    });
 
     const response = await deepseek.chat.completions.create({
       model: 'deepseek-v4-Flash',
