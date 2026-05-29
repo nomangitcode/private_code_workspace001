@@ -1,0 +1,6 @@
+name = "private-code-workspace001"
+compatibility_date = "2024-05-02"
+compatibility_flags = ["nodejs_compat"]
+
+[site]
+bucket = ".next"
